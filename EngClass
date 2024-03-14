@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class EngClass {
+    private ArrayList<Student> students;
+
+    // 构造函数
+    public EngClass() {
+        this.students = new ArrayList<>();
+    }
+
+    // 添加学生
+    public void addStudent(Student student) {
+        students.add(student);
+    }
+
+    // 删除学生
+    public void deleteStudent(int studentID) {
+        Iterator<Student> iterator = students.iterator();
+        while (iterator.hasNext()) {
+            Student student = iterator.next();
+            if (student.getStudentID() == studentID) {
+                iterator.remove();
+                break;
+            }
+        }
+    }
+
+    // 打印学生列表
+    public void printStudents() {
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
+}

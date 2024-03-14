@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        EngClass engClass = new EngClass();
+        
+        // 添加学生
+        engClass.addStudent(new Student(1, "Anne", "Smith"));
+        engClass.addStudent(new Student(2, "Bob", "Brown"));
+
+        System.out.println("添加学生后的学生列表：");
+        engClass.printStudents();
+
+        // 删除学生
+        engClass.deleteStudent(1);
+
+        System.out.println("删除学生后的学生列表：");
+        engClass.printStudents();
+    }
+}
